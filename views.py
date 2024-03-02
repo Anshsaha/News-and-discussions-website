@@ -1,14 +1,14 @@
 from django.shortcuts import render, HttpResponse
 import requests
 
-CLIENT_ID = 'SXJM9sSg9wqw8RSD99RGWA'
-SECRET = 'tHqHL1_WvP6QrQlbkRlIlt01f0gq-w'
+CLIENT_ID = #enter client id
+SECRET = #enter secret
 base_url = 'https://www.reddit.com/'
 auth = requests.auth.HTTPBasicAuth(CLIENT_ID, SECRET)
 data = {
     'grant_type': 'password',
-    'username': 'Thalaaiva',
-    'password': 'thalaiva26'
+    'username': #enter reddit username,
+    'password': #enter reddit password
     }
 headers = {'User-Agent': 'MyAPI/0.0.1'}
 res = requests.post(base_url + 'api/v1/access_token', auth=auth, data=data, headers=headers)
